@@ -3,3 +3,7 @@ D:\LapTrinh_CSDL\QLyTaxi\DTO\bin\Debug\DTO.pdb
 D:\LapTrinh_CSDL\QLyTaxi\DTO\obj\Debug\DTO.dll
 D:\LapTrinh_CSDL\QLyTaxi\DTO\obj\Debug\DTO.pdb
 D:\LapTrinh_CSDL\QLyTaxi\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+F:\GitHub\TaxiApp\QLyTaxi\DTO\bin\Debug\DTO.dll
+F:\GitHub\TaxiApp\QLyTaxi\DTO\bin\Debug\DTO.pdb
+F:\GitHub\TaxiApp\QLyTaxi\DTO\obj\Debug\DTO.dll
+F:\GitHub\TaxiApp\QLyTaxi\DTO\obj\Debug\DTO.pdb

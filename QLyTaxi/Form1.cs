@@ -59,8 +59,9 @@ namespace QL_TaXi
                 txtHoTX.Text = dgvTX.CurrentRow.Cells[1].Value.ToString();
                 txtTenTX.Text = dgvTX.CurrentRow.Cells[2].Value.ToString();
                 txtCMND.Text = dgvTX.CurrentRow.Cells[3].Value.ToString();
-                txtNgaySinh.Text = dgvTX.CurrentRow.Cells[4].Value.ToString();
                 txtDienThoai.Text = dgvTX.CurrentRow.Cells[5].Value.ToString();
+                int i = dgvTX.CurrentRow.Cells[4].Value.ToString().IndexOf(" ");
+                txtNgaySinh.Text = dgvTX.CurrentRow.Cells[4].Value.ToString().Substring(0,i);
             }
         }
 
@@ -73,9 +74,10 @@ namespace QL_TaXi
             }
             else
             {
+                string TX = txtTimKiem.Text.Trim();
                 if (rdMaNV.Checked)
                 {
-                    if (TaiXe_BUS.KiemTraMaTX_CoTonTai(txtTimKiem.Text) == 0 || txtTimKiem.Text.Length>5)
+                    if (TaiXe_BUS.KiemTraMaTX_CoTonTai(TX) == 0 || TX.Length > 5)
                     {
                         MessageBox.Show("Mã Tài Xế không tồn tại.", "Kết Qủa Tìm Kiếm", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         txtTimKiem.Focus();
@@ -83,22 +85,38 @@ namespace QL_TaXi
                     }
                     else
                     {
-                        dgvTX.DataSource = TaiXe_BUS.TimTheoMaTaiXe(txtTimKiem.Text);
+                        dgvTX.DataSource = TaiXe_BUS.TimTheoMaTaiXe(TX);
                     }
                        
 
                 }
                 else
                 {
-                        if(TaiXe_BUS.KiemTraTenTX_CoTonTai(txtTimKiem.Text)==0)
+                    if (TX.Contains(" "))
                         {
-                            MessageBox.Show("Tên Tài Xế không tồn tại.", "Kết Qủa Tìm Kiếm", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            txtTimKiem.Focus();
+                            if (TaiXe_BUS.KiemTraFullnameTX(TX) == 0)
+                            {
+                                MessageBox.Show("Tên Tài Xế không tồn tại.", "Kết Qủa Tìm Kiếm", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                txtTimKiem.Focus();
+                            }
+                            else
+                            {
+                                dgvTX.DataSource = TaiXe_BUS.TimKiemTX_Fullname(TX);
+                            }
                         }
                         else
                         {
-                            dgvTX.DataSource = TaiXe_BUS.TimTheoTenTaiXe(txtTimKiem.Text);
+                            if (TaiXe_BUS.KiemTraTenTX_CoTonTai(TX) == 0)
+                            {
+                                MessageBox.Show("Tên Tài Xế không tồn tại.", "Kết Qủa Tìm Kiếm", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                txtTimKiem.Focus();
+                            }
+                            else
+                            {
+                                dgvTX.DataSource = TaiXe_BUS.TimTheoTenTaiXe(TX);
+                            }
                         }
+                       
                 }
             }
            
@@ -173,7 +191,7 @@ namespace QL_TaXi
                                             }
                                             else
                                             {
-                                                TaiXe_DTO TX = new TaiXe_DTO(txtMaTX.Text, txtHoTX.Text, txtTenTX.Text, txtCMND.Text, txtNgaySinh.Text, txtDienThoai.Text);
+                                                TaiXe_DTO TX = new TaiXe_DTO(txtMaTX.Text.Trim(), txtHoTX.Text.Trim(), txtTenTX.Text.Trim(), txtCMND.Text.Trim(), txtNgaySinh.Text.Trim(), txtDienThoai.Text.Trim());
                                                 TaiXe_BUS.ThemTaiXeMoi(TX);
                                                 LoadData();
                                             }
@@ -268,7 +286,7 @@ namespace QL_TaXi
                                         Convert.ToDateTime(txtNgaySinh.Text);
                                         Convert.ToInt64(txtDienThoai.Text);
 
-                                        TaiXe_DTO TX = new TaiXe_DTO(txtMaTX.Text, txtHoTX.Text, txtTenTX.Text, txtCMND.Text, txtNgaySinh.Text, txtDienThoai.Text);
+                                        TaiXe_DTO TX = new TaiXe_DTO(txtMaTX.Text.Trim(), txtHoTX.Text.Trim(), txtTenTX.Text.Trim(), txtCMND.Text.Trim(), txtNgaySinh.Text.Trim(), txtDienThoai.Text.Trim());
                                         TaiXe_BUS.SuaTaiXe(TX);
                                         LoadData();
                                     }
@@ -290,6 +308,7 @@ namespace QL_TaXi
         {
             tabControl1.SelectedTab = tp_xe;
         }
+
 
 
     }

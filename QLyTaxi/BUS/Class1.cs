@@ -48,6 +48,18 @@ namespace BUS
             return TaiXe_DAO.TimTheoTenTaiXe(tentaixe);
         }
 
+        //Tim Kiem Tai Xe Fullname
+        public static DataTable TimKiemTX_Fullname(string fullname)
+        {
+            return TaiXe_DAO.TimKiemTX_Fullname(fullname);
+        }
+
+        //Kiem Tra Fullname Tai Xe Co Ton Tai
+        public static int KiemTraFullnameTX(string fullname)
+        {
+            return TaiXe_DAO.KiemTraFullnameTX(fullname);
+        }
+
         //Kiem tra su ton tai cua ma tai xe
         public static int KiemTraMaTX_CoTonTai(string mataixe)
         {
@@ -71,5 +83,6 @@ namespace BUS
         {
             TaiXe_DAO.SuaTaiXe(taixe);
         }
+
     }
 }
