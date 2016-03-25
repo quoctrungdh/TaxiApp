@@ -1,0 +1,9 @@
+D:\LapTrinh_CSDL\QLyTaxi\BUS\bin\Debug\BUS.dll
+D:\LapTrinh_CSDL\QLyTaxi\BUS\bin\Debug\BUS.pdb
+D:\LapTrinh_CSDL\QLyTaxi\BUS\bin\Debug\DAO.dll
+D:\LapTrinh_CSDL\QLyTaxi\BUS\bin\Debug\DTO.dll
+D:\LapTrinh_CSDL\QLyTaxi\BUS\bin\Debug\DAO.pdb
+D:\LapTrinh_CSDL\QLyTaxi\BUS\bin\Debug\DTO.pdb
+D:\LapTrinh_CSDL\QLyTaxi\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+D:\LapTrinh_CSDL\QLyTaxi\BUS\obj\Debug\BUS.dll
+D:\LapTrinh_CSDL\QLyTaxi\BUS\obj\Debug\BUS.pdb

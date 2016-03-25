@@ -1,0 +1,7 @@
+D:\LapTrinh_CSDL\QLyTaxi\DAO\bin\Debug\DAO.dll
+D:\LapTrinh_CSDL\QLyTaxi\DAO\bin\Debug\DAO.pdb
+D:\LapTrinh_CSDL\QLyTaxi\DAO\bin\Debug\DTO.dll
+D:\LapTrinh_CSDL\QLyTaxi\DAO\bin\Debug\DTO.pdb
+D:\LapTrinh_CSDL\QLyTaxi\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+D:\LapTrinh_CSDL\QLyTaxi\DAO\obj\Debug\DAO.dll
+D:\LapTrinh_CSDL\QLyTaxi\DAO\obj\Debug\DAO.pdb
