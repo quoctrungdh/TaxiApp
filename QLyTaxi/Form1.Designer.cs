@@ -173,7 +173,7 @@
             // 
             // txtDienThoai
             // 
-            this.txtDienThoai.Location = new System.Drawing.Point(282, 252);
+            this.txtDienThoai.Location = new System.Drawing.Point(303, 252);
             this.txtDienThoai.MaxLength = 10;
             this.txtDienThoai.Name = "txtDienThoai";
             this.txtDienThoai.Size = new System.Drawing.Size(257, 29);
@@ -181,14 +181,14 @@
             // 
             // txtNgaySinh
             // 
-            this.txtNgaySinh.Location = new System.Drawing.Point(282, 219);
+            this.txtNgaySinh.Location = new System.Drawing.Point(303, 219);
             this.txtNgaySinh.Name = "txtNgaySinh";
             this.txtNgaySinh.Size = new System.Drawing.Size(257, 29);
             this.txtNgaySinh.TabIndex = 4;
             // 
             // txtCMND
             // 
-            this.txtCMND.Location = new System.Drawing.Point(282, 188);
+            this.txtCMND.Location = new System.Drawing.Point(303, 188);
             this.txtCMND.MaxLength = 10;
             this.txtCMND.Name = "txtCMND";
             this.txtCMND.Size = new System.Drawing.Size(257, 29);
@@ -196,21 +196,21 @@
             // 
             // txtTenTX
             // 
-            this.txtTenTX.Location = new System.Drawing.Point(282, 155);
+            this.txtTenTX.Location = new System.Drawing.Point(303, 155);
             this.txtTenTX.Name = "txtTenTX";
             this.txtTenTX.Size = new System.Drawing.Size(257, 29);
             this.txtTenTX.TabIndex = 2;
             // 
             // txtHoTX
             // 
-            this.txtHoTX.Location = new System.Drawing.Point(282, 122);
+            this.txtHoTX.Location = new System.Drawing.Point(303, 122);
             this.txtHoTX.Name = "txtHoTX";
             this.txtHoTX.Size = new System.Drawing.Size(257, 29);
             this.txtHoTX.TabIndex = 1;
             // 
             // txtMaTX
             // 
-            this.txtMaTX.Location = new System.Drawing.Point(282, 88);
+            this.txtMaTX.Location = new System.Drawing.Point(303, 88);
             this.txtMaTX.MaxLength = 5;
             this.txtMaTX.Name = "txtMaTX";
             this.txtMaTX.Size = new System.Drawing.Size(257, 29);
@@ -220,7 +220,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(165, 163);
+            this.label5.Location = new System.Drawing.Point(204, 163);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(98, 21);
             this.label5.TabIndex = 2;
@@ -230,7 +230,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(165, 227);
+            this.label7.Location = new System.Drawing.Point(204, 227);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(91, 21);
             this.label7.TabIndex = 2;
@@ -240,7 +240,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(165, 255);
+            this.label6.Location = new System.Drawing.Point(204, 255);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(97, 21);
             this.label6.TabIndex = 2;
@@ -250,7 +250,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(165, 196);
+            this.label4.Location = new System.Drawing.Point(204, 196);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 21);
             this.label4.TabIndex = 2;
@@ -260,7 +260,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(165, 96);
+            this.label3.Location = new System.Drawing.Point(204, 96);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 21);
             this.label3.TabIndex = 2;
@@ -270,7 +270,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(166, 130);
+            this.label2.Location = new System.Drawing.Point(205, 130);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 21);
             this.label2.TabIndex = 2;
@@ -278,9 +278,11 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = global::QL_TaXi.Properties.Resources.download;
             this.pictureBox1.Location = new System.Drawing.Point(6, 86);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(141, 195);
+            this.pictureBox1.Size = new System.Drawing.Size(182, 195);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
@@ -295,7 +297,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(6, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(533, 80);
+            this.groupBox1.Size = new System.Drawing.Size(554, 80);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm Kiếm";
