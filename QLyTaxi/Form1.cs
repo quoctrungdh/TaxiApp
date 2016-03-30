@@ -65,8 +65,16 @@ namespace QL_TaXi
                 txtTenTX.Text = dgvTX.CurrentRow.Cells[2].Value.ToString();
                 txtCMND.Text = dgvTX.CurrentRow.Cells[3].Value.ToString();
                 txtDienThoai.Text = dgvTX.CurrentRow.Cells[5].Value.ToString();
-                int i = dgvTX.CurrentRow.Cells[4].Value.ToString().IndexOf(" ");
-                txtNgaySinh.Text = dgvTX.CurrentRow.Cells[4].Value.ToString().Substring(0,i);
+                if(dgvTX.CurrentRow.Cells[4].Value.ToString()!="")
+                {
+                    int i = dgvTX.CurrentRow.Cells[4].Value.ToString().IndexOf(" ");
+                    txtNgaySinh.Text = dgvTX.CurrentRow.Cells[4].Value.ToString().Substring(0, i);
+                }
+                else
+                {
+                    txtNgaySinh.Text = dgvTX.CurrentRow.Cells[4].Value.ToString();
+                }
+               
             }
         }
 

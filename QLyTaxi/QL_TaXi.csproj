@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>Bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -117,6 +117,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="download.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1459325611_add2-1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1459325731_DeleteRed1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1459326660_advancedsettings1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1459329230_exit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons-Land-Transporter-Taxi-Right-Yellow.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1459329975_xmag.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Danrabbit-Elementary-Button-delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Iconshow-Transport-Sportscar-car-2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cemagraphics-Classic-Cars-Bmw-mini.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

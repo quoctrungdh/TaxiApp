@@ -16,3 +16,5 @@ F:\GitHub\TaxiApp\QLyTaxi\BUS\bin\Debug\DTO.pdb
 F:\GitHub\TaxiApp\QLyTaxi\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
 F:\GitHub\TaxiApp\QLyTaxi\BUS\obj\Debug\BUS.dll
 F:\GitHub\TaxiApp\QLyTaxi\BUS\obj\Debug\BUS.pdb
+F:\GitHub\TaxiApp\QLyTaxi\Bin\BUS.dll
+F:\GitHub\TaxiApp\QLyTaxi\Bin\BUS.pdb

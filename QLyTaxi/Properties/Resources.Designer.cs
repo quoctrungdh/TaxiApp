@@ -63,9 +63,99 @@ namespace QL_TaXi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1459325611_add2_ {
+            get {
+                object obj = ResourceManager.GetObject("1459325611_add2-", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1459325731_DeleteRed {
+            get {
+                object obj = ResourceManager.GetObject("1459325731_DeleteRed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1459326660_advancedsettings {
+            get {
+                object obj = ResourceManager.GetObject("1459326660_advancedsettings", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1459329230_exit {
+            get {
+                object obj = ResourceManager.GetObject("1459329230_exit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1459329975_xmag {
+            get {
+                object obj = ResourceManager.GetObject("1459329975_xmag", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cemagraphics_Classic_Cars_Bmw_mini {
+            get {
+                object obj = ResourceManager.GetObject("Cemagraphics-Classic-Cars-Bmw-mini", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Danrabbit_Elementary_Button_delete {
+            get {
+                object obj = ResourceManager.GetObject("Danrabbit-Elementary-Button-delete", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap download {
             get {
                 object obj = ResourceManager.GetObject("download", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icons_Land_Transporter_Taxi_Right_Yellow {
+            get {
+                object obj = ResourceManager.GetObject("Icons-Land-Transporter-Taxi-Right-Yellow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Iconshow_Transport_Sportscar_car_2 {
+            get {
+                object obj = ResourceManager.GetObject("Iconshow-Transport-Sportscar-car-2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
