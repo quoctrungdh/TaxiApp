@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
 using System.Data.SqlClient;
 using DTO;
 using BUS;
@@ -31,6 +30,7 @@ namespace QL_TaXi
         private void Form1_Load(object sender, EventArgs e)
         {
             LoadData();
+            LoadDSXe();
         }
 
         public void LoadData()
@@ -314,7 +314,44 @@ namespace QL_TaXi
             Application.Exit();
         }
 
+        private void tp_xe_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void LoadDSXe()
+        {
+            List<Xe> list = new Xe_BUS().LoadDanhSachXe();
+            dgvDsXe.DataSource = list;
+        }
+
+        private void dgvDsXe_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvDsXe.CurrentRow != null)
+            {
+                txtBienSo.Text = dgvDsXe.CurrentRow.Cells[0].Value.ToString();
+                txtMaTaiXe.Text = dgvDsXe.CurrentRow.Cells[1].Value.ToString();
+                txtMaLoaiXe.Text = dgvDsXe.CurrentRow.Cells[2].Value.ToString();
+            }
+        }
+
+        private void btTimBS_Click(object sender, EventArgs e)
+        {
+            txtBienSo.Text = string.Empty;
+            txtMaLoaiXe.Text = string.Empty;
+            txtMaTaiXe.Text = string.Empty;
+            if (txtTimBS.Text == "")
+            {
+                MessageBox.Show("Vui long nhap noi dung can tim!", "Thong Bao", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtTimBS.Focus();
+            }
+            else 
+            {
+                string bSoXe = txtTimBS.Text.Trim();
+                List<Xe> list = new Xe_BUS().TimTheoBienSo(bSoXe);
+                dgvDsXe.DataSource = list;
+            }
+        }
 
     }
 }

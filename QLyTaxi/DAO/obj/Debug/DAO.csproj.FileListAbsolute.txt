@@ -12,3 +12,10 @@ F:\GitHub\TaxiApp\QLyTaxi\DAO\bin\Debug\DTO.pdb
 F:\GitHub\TaxiApp\QLyTaxi\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
 F:\GitHub\TaxiApp\QLyTaxi\DAO\obj\Debug\DAO.dll
 F:\GitHub\TaxiApp\QLyTaxi\DAO\obj\Debug\DAO.pdb
+D:\TaxiApp\QLyTaxi\DAO\bin\Debug\DAO.dll
+D:\TaxiApp\QLyTaxi\DAO\bin\Debug\DAO.pdb
+D:\TaxiApp\QLyTaxi\DAO\bin\Debug\DTO.dll
+D:\TaxiApp\QLyTaxi\DAO\bin\Debug\DTO.pdb
+D:\TaxiApp\QLyTaxi\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+D:\TaxiApp\QLyTaxi\DAO\obj\Debug\DAO.dll
+D:\TaxiApp\QLyTaxi\DAO\obj\Debug\DAO.pdb

@@ -7,3 +7,8 @@ F:\GitHub\TaxiApp\QLyTaxi\DTO\bin\Debug\DTO.dll
 F:\GitHub\TaxiApp\QLyTaxi\DTO\bin\Debug\DTO.pdb
 F:\GitHub\TaxiApp\QLyTaxi\DTO\obj\Debug\DTO.dll
 F:\GitHub\TaxiApp\QLyTaxi\DTO\obj\Debug\DTO.pdb
+D:\TaxiApp\QLyTaxi\DTO\bin\Debug\DTO.dll
+D:\TaxiApp\QLyTaxi\DTO\bin\Debug\DTO.pdb
+D:\TaxiApp\QLyTaxi\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+D:\TaxiApp\QLyTaxi\DTO\obj\Debug\DTO.dll
+D:\TaxiApp\QLyTaxi\DTO\obj\Debug\DTO.pdb
