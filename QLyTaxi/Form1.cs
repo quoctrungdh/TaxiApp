@@ -309,6 +309,11 @@ namespace QL_TaXi
             tabControl1.SelectedTab = tp_xe;
         }
 
+        private void btDong_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
 
 
     }
