@@ -16,6 +16,7 @@ F:\GitHub\TaxiApp\QLyTaxi\BUS\bin\Debug\DTO.pdb
 F:\GitHub\TaxiApp\QLyTaxi\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
 F:\GitHub\TaxiApp\QLyTaxi\BUS\obj\Debug\BUS.dll
 F:\GitHub\TaxiApp\QLyTaxi\BUS\obj\Debug\BUS.pdb
+<<<<<<< HEAD
 D:\TaxiApp\QLyTaxi\BUS\bin\Debug\BUS.dll
 D:\TaxiApp\QLyTaxi\BUS\bin\Debug\BUS.pdb
 D:\TaxiApp\QLyTaxi\BUS\bin\Debug\DAO.dll
@@ -25,3 +26,7 @@ D:\TaxiApp\QLyTaxi\BUS\bin\Debug\DTO.pdb
 D:\TaxiApp\QLyTaxi\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
 D:\TaxiApp\QLyTaxi\BUS\obj\Debug\BUS.dll
 D:\TaxiApp\QLyTaxi\BUS\obj\Debug\BUS.pdb
+=======
+F:\GitHub\TaxiApp\QLyTaxi\Bin\BUS.dll
+F:\GitHub\TaxiApp\QLyTaxi\Bin\BUS.pdb
+>>>>>>> origin/QLy_TaiXe
