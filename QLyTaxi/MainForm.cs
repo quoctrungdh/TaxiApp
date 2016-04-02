@@ -24,9 +24,15 @@ namespace QL_TaXi
             FormLogin frm = new FormLogin();
             frm.ShowDialog();
             if (DK == 0)
+            {
                 Close();
+            }
+                
             else
+            {
                 InitializeComponent();
+            }
+                
         }
 
 
