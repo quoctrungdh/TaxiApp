@@ -322,6 +322,7 @@ namespace QL_TaXi
         private void btnXeTX_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedTab = tp_xe;
+            dgvXe.DataSource = TaiXe_BUS.LayDanhSachCacXeCuaTX(tempMaTX);
         }
         
 

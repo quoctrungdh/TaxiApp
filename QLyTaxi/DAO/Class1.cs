@@ -256,6 +256,27 @@ namespace DAO
             }
         }
 
+        //Lay danh sach cac xe cua mot Tai Xe
+        public static DataTable LayDanhSachCacXeCuaTX(string MaTX)
+        {
+            try
+            {
+                SqlConnection cn = SQLconnectionData.HamKetNoi();
+                SqlCommand cmd = new SqlCommand("LayDanhSachXeCuaTX", cn);
+                cmd.Parameters.AddWithValue("@MaTX", MaTX);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter apdt = new SqlDataAdapter(cmd);
+                DataTable table=new DataTable();
+                apdt.Fill(table);
+                return table;
+
+            }
+            catch (Exception ex)
+            {
+                
+                throw ex;
+            }
+        }
         
     }
 

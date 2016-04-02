@@ -84,6 +84,11 @@ namespace BUS
             TaiXe_DAO.SuaTaiXe(taixe);
         }
 
+        public static DataTable LayDanhSachCacXeCuaTX(string MaTX)
+        {
+            return TaiXe_DAO.LayDanhSachCacXeCuaTX(MaTX);
+        }
+
     }
 
     public class KhachHang_BUS
