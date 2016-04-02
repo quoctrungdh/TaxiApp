@@ -28,7 +28,7 @@ namespace QL_TaXi
         {
             try
             {
-                dgvKh_ChuyenDi.DataSource = KhachHang_BUS.LayDanhSachCacChuyenDi_KH(Form1.maKH_CD);
+                dgvKh_ChuyenDi.DataSource = KhachHang_BUS.LayDanhSachCacChuyenDi_KH(MainForm.maKH_CD);
             }
             catch(Exception ex)
             {
