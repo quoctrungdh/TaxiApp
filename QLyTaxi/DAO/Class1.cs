@@ -259,7 +259,6 @@ namespace DAO
         
     }
 
-
     public class KhachHang_DAO
     {
         //Loat danh sach tat ca Khach Hang:
@@ -484,6 +483,27 @@ namespace DAO
             }
             catch(Exception ex)
             {
+                throw ex;
+            }
+        }
+    }
+
+    public class Xe_DAO
+    {
+        public static DataTable LoadDanhSachTatCaXe()
+        {
+            try
+            {
+                SqlConnection cnn = SQLconnectionData.HamKetNoi();
+                SqlCommand cmd = new SqlCommand("LayDanhSachXe", cnn);
+                cmd.CommandType = CommandType.Text;
+                SqlDataAdapter adpt = new SqlDataAdapter(cmd);
+                DataTable table = new DataTable();
+                adpt.Fill(table);
+                return table;
+            }
+            catch (Exception ex)
+            {                
                 throw ex;
             }
         }

@@ -168,4 +168,12 @@ namespace BUS
             
         }
     }
+
+    public class Xe_BUS
+    {
+        public static DataTable LoadDanhSachTatCaXe()
+        {
+            return Xe_DAO.LoadDanhSachTatCaXe();
+        }
+    }
 }

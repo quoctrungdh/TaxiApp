@@ -58,6 +58,15 @@
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tp_xe = new System.Windows.Forms.TabPage();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.txtTimBangSo = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.tp_khachhang = new System.Windows.Forms.TabPage();
             this.label15 = new System.Windows.Forms.Label();
@@ -86,26 +95,28 @@
             this.btnThemKH = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tp_baocao = new System.Windows.Forms.TabPage();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.label18 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.dgvXe = new System.Windows.Forms.DataGridView();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tp_taixe.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tp_xe.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.tp_khachhang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKH)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvXe)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -446,6 +457,16 @@
             // 
             // tp_xe
             // 
+            this.tp_xe.Controls.Add(this.comboBox1);
+            this.tp_xe.Controls.Add(this.button3);
+            this.tp_xe.Controls.Add(this.button4);
+            this.tp_xe.Controls.Add(this.button5);
+            this.tp_xe.Controls.Add(this.button6);
+            this.tp_xe.Controls.Add(this.button7);
+            this.tp_xe.Controls.Add(this.dgvXe);
+            this.tp_xe.Controls.Add(this.textBox4);
+            this.tp_xe.Controls.Add(this.label20);
+            this.tp_xe.Controls.Add(this.label19);
             this.tp_xe.Controls.Add(this.textBox2);
             this.tp_xe.Controls.Add(this.label18);
             this.tp_xe.Controls.Add(this.groupBox3);
@@ -457,6 +478,106 @@
             this.tp_xe.TabIndex = 1;
             this.tp_xe.Text = "Quản Lý Xe";
             this.tp_xe.UseVisualStyleBackColor = true;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(212, 173);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(215, 20);
+            this.textBox2.TabIndex = 4;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(105, 171);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(86, 20);
+            this.label18.TabIndex = 3;
+            this.label18.Text = "Biển số xe:";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Controls.Add(this.button2);
+            this.groupBox3.Controls.Add(this.radioButton1);
+            this.groupBox3.Controls.Add(this.radioButton2);
+            this.groupBox3.Controls.Add(this.txtTimBangSo);
+            this.groupBox3.Controls.Add(this.label17);
+            this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(6, 73);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(554, 80);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Tìm Kiếm";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button1.Image = global::QL_TaXi.Properties.Resources.Danrabbit_Elementary_Button_delete;
+            this.button1.Location = new System.Drawing.Point(471, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(77, 68);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Bỏ Tìm";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button2.Image = global::QL_TaXi.Properties.Resources._1459329975_xmag;
+            this.button2.Location = new System.Drawing.Point(390, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 68);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Tìm";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.Location = new System.Drawing.Point(230, 55);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(154, 25);
+            this.radioButton1.TabIndex = 3;
+            this.radioButton1.Text = "Tìm theo mã TX";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Checked = true;
+            this.radioButton2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton2.Location = new System.Drawing.Point(35, 55);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(178, 25);
+            this.radioButton2.TabIndex = 2;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Tìm theo biển số xe";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // txtTimBangSo
+            // 
+            this.txtTimBangSo.Location = new System.Drawing.Point(98, 23);
+            this.txtTimBangSo.Name = "txtTimBangSo";
+            this.txtTimBangSo.Size = new System.Drawing.Size(174, 26);
+            this.txtTimBangSo.TabIndex = 1;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(31, 28);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(51, 21);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "Tìm: ";
             // 
             // label16
             // 
@@ -774,104 +895,113 @@
             this.tp_baocao.Text = "Báo Cáo";
             this.tp_baocao.UseVisualStyleBackColor = true;
             // 
-            // groupBox3
+            // label19
             // 
-            this.groupBox3.Controls.Add(this.button1);
-            this.groupBox3.Controls.Add(this.button2);
-            this.groupBox3.Controls.Add(this.radioButton1);
-            this.groupBox3.Controls.Add(this.radioButton2);
-            this.groupBox3.Controls.Add(this.textBox1);
-            this.groupBox3.Controls.Add(this.label17);
-            this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(6, 73);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(554, 80);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Tìm Kiếm";
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(108, 241);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(83, 20);
+            this.label19.TabIndex = 5;
+            this.label19.Text = "Mã loại xe:";
             // 
-            // button1
+            // textBox4
             // 
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.Image = global::QL_TaXi.Properties.Resources.Danrabbit_Elementary_Button_delete;
-            this.button1.Location = new System.Drawing.Point(471, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(77, 68);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Bỏ Tìm";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button1.UseVisualStyleBackColor = true;
+            this.textBox4.Location = new System.Drawing.Point(212, 207);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(215, 20);
+            this.textBox4.TabIndex = 8;
             // 
-            // button2
+            // label20
             // 
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button2.Image = global::QL_TaXi.Properties.Resources._1459329975_xmag;
-            this.button2.Location = new System.Drawing.Point(390, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 68);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Tìm";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button2.UseVisualStyleBackColor = true;
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(115, 207);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(76, 20);
+            this.label20.TabIndex = 7;
+            this.label20.Text = "Mã tài xế:";
             // 
-            // textBox1
+            // dgvXe
             // 
-            this.textBox1.Location = new System.Drawing.Point(98, 23);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(174, 26);
-            this.textBox1.TabIndex = 1;
+            this.dgvXe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvXe.Location = new System.Drawing.Point(6, 284);
+            this.dgvXe.Name = "dgvXe";
+            this.dgvXe.Size = new System.Drawing.Size(557, 223);
+            this.dgvXe.TabIndex = 9;
             // 
-            // label17
+            // button3
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(31, 28);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(51, 21);
-            this.label17.TabIndex = 0;
-            this.label17.Text = "Tìm: ";
+            this.button3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button3.Image = global::QL_TaXi.Properties.Resources._1459329230_exit;
+            this.button3.Location = new System.Drawing.Point(482, 518);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 61);
+            this.button3.TabIndex = 18;
+            this.button3.Text = "Thoát";
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button3.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // button4
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(230, 55);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(154, 25);
-            this.radioButton1.TabIndex = 3;
-            this.radioButton1.Text = "Tìm theo mã TX";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.button4.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button4.Image = global::QL_TaXi.Properties.Resources._1459326660_advancedsettings;
+            this.button4.Location = new System.Drawing.Point(205, 518);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 61);
+            this.button4.TabIndex = 16;
+            this.button4.Text = "Sửa";
+            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button4.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // button5
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Checked = true;
-            this.radioButton2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(35, 55);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(178, 25);
-            this.radioButton2.TabIndex = 2;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Tìm theo biển số xe";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.button5.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button5.Image = global::QL_TaXi.Properties.Resources.Icons_Land_Transporter_Taxi_Right_Yellow;
+            this.button5.Location = new System.Drawing.Point(301, 518);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(160, 61);
+            this.button5.TabIndex = 17;
+            this.button5.Text = "Các xe của TX";
+            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button5.UseVisualStyleBackColor = true;
             // 
-            // label18
+            // button6
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(46, 178);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(41, 13);
-            this.label18.TabIndex = 3;
-            this.label18.Text = "label18";
+            this.button6.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button6.Image = global::QL_TaXi.Properties.Resources._1459325731_DeleteRed;
+            this.button6.Location = new System.Drawing.Point(109, 518);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 61);
+            this.button6.TabIndex = 15;
+            this.button6.Text = "Xóa";
+            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button6.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // button7
             // 
-            this.textBox2.Location = new System.Drawing.Point(204, 178);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(215, 20);
-            this.textBox2.TabIndex = 4;
+            this.button7.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button7.Image = global::QL_TaXi.Properties.Resources._1459325611_add2_;
+            this.button7.Location = new System.Drawing.Point(7, 518);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(81, 61);
+            this.button7.TabIndex = 14;
+            this.button7.Text = "Thêm";
+            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(212, 239);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(215, 21);
+            this.comboBox1.TabIndex = 19;
             // 
             // MainForm
             // 
@@ -893,14 +1023,15 @@
             this.groupBox1.PerformLayout();
             this.tp_xe.ResumeLayout(false);
             this.tp_xe.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.tp_khachhang.ResumeLayout(false);
             this.tp_khachhang.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKH)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvXe)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -970,10 +1101,20 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTimBangSo;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.DataGridView dgvXe;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
     }
 }
 

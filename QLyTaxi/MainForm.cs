@@ -34,6 +34,7 @@ namespace QL_TaXi
         {
             LoadDataTX();
             LoadDataKH();
+            LoadDataXe();
         }
 
         /// <summary>
@@ -550,7 +551,23 @@ namespace QL_TaXi
             frmKH_CacChuyenDi.ShowDialog();
         }
 
-      
+        /// <summary>
+        /// Phần code lập trình cho form Quan Ly xe
+        /// </summary>
+        /// 
+
+
+        //public void LoadDataTX()
+        //{
+        //    txtTimKiem.Text = "";
+        //    dgvTX.DataSource = TaiXe_BUS.LoadDanhSachTatCaTaiXe();
+        //}
+
+        public void LoadDataXe()
+        {
+            txtTimBangSo.Text = string.Empty;
+            dgvXe.DataSource = Xe_BUS.LoadDanhSachTatCaXe();
+        }
 
     }
 }
