@@ -80,6 +80,12 @@ namespace QL_TaXi
             checkBox1.Checked = false;
         }
 
+        private void FormLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có thật sự muốn thoát", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.Cancel)
+                e.Cancel = true;
+        }
+
 
     }
 }
