@@ -58,6 +58,7 @@
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tp_xe = new System.Windows.Forms.TabPage();
+            this.label16 = new System.Windows.Forms.Label();
             this.tp_khachhang = new System.Windows.Forms.TabPage();
             this.label15 = new System.Windows.Forms.Label();
             this.btnThoatKH = new System.Windows.Forms.Button();
@@ -85,7 +86,15 @@
             this.btnThemKH = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tp_baocao = new System.Windows.Forms.TabPage();
-            this.label16 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.label18 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tp_taixe.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTX)).BeginInit();
@@ -96,6 +105,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvKH)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -436,6 +446,9 @@
             // 
             // tp_xe
             // 
+            this.tp_xe.Controls.Add(this.textBox2);
+            this.tp_xe.Controls.Add(this.label18);
+            this.tp_xe.Controls.Add(this.groupBox3);
             this.tp_xe.Controls.Add(this.label16);
             this.tp_xe.Location = new System.Drawing.Point(4, 22);
             this.tp_xe.Name = "tp_xe";
@@ -444,6 +457,18 @@
             this.tp_xe.TabIndex = 1;
             this.tp_xe.Text = "Quản Lý Xe";
             this.tp_xe.UseVisualStyleBackColor = true;
+            // 
+            // label16
+            // 
+            this.label16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label16.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label16.Location = new System.Drawing.Point(6, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(557, 70);
+            this.label16.TabIndex = 1;
+            this.label16.Text = "QUẢN LÝ XE";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tp_khachhang
             // 
@@ -749,17 +774,104 @@
             this.tp_baocao.Text = "Báo Cáo";
             this.tp_baocao.UseVisualStyleBackColor = true;
             // 
-            // label16
+            // groupBox3
             // 
-            this.label16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label16.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label16.Location = new System.Drawing.Point(6, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(557, 70);
-            this.label16.TabIndex = 1;
-            this.label16.Text = "QUẢN LÝ TÀI XẾ";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Controls.Add(this.button2);
+            this.groupBox3.Controls.Add(this.radioButton1);
+            this.groupBox3.Controls.Add(this.radioButton2);
+            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.label17);
+            this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(6, 73);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(554, 80);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Tìm Kiếm";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button1.Image = global::QL_TaXi.Properties.Resources.Danrabbit_Elementary_Button_delete;
+            this.button1.Location = new System.Drawing.Point(471, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(77, 68);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Bỏ Tìm";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button2.Image = global::QL_TaXi.Properties.Resources._1459329975_xmag;
+            this.button2.Location = new System.Drawing.Point(390, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 68);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Tìm";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(98, 23);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(174, 26);
+            this.textBox1.TabIndex = 1;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(31, 28);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(51, 21);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "Tìm: ";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.Location = new System.Drawing.Point(230, 55);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(154, 25);
+            this.radioButton1.TabIndex = 3;
+            this.radioButton1.Text = "Tìm theo mã TX";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Checked = true;
+            this.radioButton2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton2.Location = new System.Drawing.Point(35, 55);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(178, 25);
+            this.radioButton2.TabIndex = 2;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Tìm theo biển số xe";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(46, 178);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(41, 13);
+            this.label18.TabIndex = 3;
+            this.label18.Text = "label18";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(204, 178);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(215, 20);
+            this.textBox2.TabIndex = 4;
             // 
             // MainForm
             // 
@@ -780,12 +892,15 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tp_xe.ResumeLayout(false);
+            this.tp_xe.PerformLayout();
             this.tp_khachhang.ResumeLayout(false);
             this.tp_khachhang.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKH)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -850,6 +965,15 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label18;
     }
 }
 
