@@ -14,18 +14,19 @@ using BUS;
 
 namespace QL_TaXi
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         public static int DK = 0;
         public static string maKH_CD = "";
         string tempMaTX;
-        public Form1()
+        public MainForm()
         {
             FormLogin frm = new FormLogin();
             frm.ShowDialog();
             if (DK == 0)
                 Close();
-            InitializeComponent();
+            else
+                InitializeComponent();
         }
 
 
