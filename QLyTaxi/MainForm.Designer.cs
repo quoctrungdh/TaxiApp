@@ -58,13 +58,23 @@
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tp_xe = new System.Windows.Forms.TabPage();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.cbMaLoaiXe = new System.Windows.Forms.ComboBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btSuaXe = new System.Windows.Forms.Button();
+            this.btThemLoaiXe = new System.Windows.Forms.Button();
+            this.btXoaXe = new System.Windows.Forms.Button();
+            this.btThemXe = new System.Windows.Forms.Button();
+            this.dgvXe = new System.Windows.Forms.DataGridView();
+            this.txtMaTaiXe = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txtBienSoXe = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.btBoTimXe = new System.Windows.Forms.Button();
+            this.btTimXe = new System.Windows.Forms.Button();
+            this.rdMaTaiXe = new System.Windows.Forms.RadioButton();
+            this.rdBangsoXe = new System.Windows.Forms.RadioButton();
             this.txtTimBangSo = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -95,28 +105,18 @@
             this.btnThemKH = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tp_baocao = new System.Windows.Forms.TabPage();
-            this.label19 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.dgvXe = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tp_taixe.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tp_xe.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvXe)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.tp_khachhang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKH)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvXe)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -457,17 +457,17 @@
             // 
             // tp_xe
             // 
-            this.tp_xe.Controls.Add(this.comboBox1);
+            this.tp_xe.Controls.Add(this.cbMaLoaiXe);
             this.tp_xe.Controls.Add(this.button3);
-            this.tp_xe.Controls.Add(this.button4);
-            this.tp_xe.Controls.Add(this.button5);
-            this.tp_xe.Controls.Add(this.button6);
-            this.tp_xe.Controls.Add(this.button7);
+            this.tp_xe.Controls.Add(this.btSuaXe);
+            this.tp_xe.Controls.Add(this.btThemLoaiXe);
+            this.tp_xe.Controls.Add(this.btXoaXe);
+            this.tp_xe.Controls.Add(this.btThemXe);
             this.tp_xe.Controls.Add(this.dgvXe);
-            this.tp_xe.Controls.Add(this.textBox4);
+            this.tp_xe.Controls.Add(this.txtMaTaiXe);
             this.tp_xe.Controls.Add(this.label20);
             this.tp_xe.Controls.Add(this.label19);
-            this.tp_xe.Controls.Add(this.textBox2);
+            this.tp_xe.Controls.Add(this.txtBienSoXe);
             this.tp_xe.Controls.Add(this.label18);
             this.tp_xe.Controls.Add(this.groupBox3);
             this.tp_xe.Controls.Add(this.label16);
@@ -479,12 +479,125 @@
             this.tp_xe.Text = "Quản Lý Xe";
             this.tp_xe.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // cbMaLoaiXe
             // 
-            this.textBox2.Location = new System.Drawing.Point(212, 173);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(215, 20);
-            this.textBox2.TabIndex = 4;
+            this.cbMaLoaiXe.FormattingEnabled = true;
+            this.cbMaLoaiXe.Location = new System.Drawing.Point(212, 239);
+            this.cbMaLoaiXe.Name = "cbMaLoaiXe";
+            this.cbMaLoaiXe.Size = new System.Drawing.Size(215, 21);
+            this.cbMaLoaiXe.TabIndex = 19;
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button3.Image = global::QL_TaXi.Properties.Resources._1459329230_exit;
+            this.button3.Location = new System.Drawing.Point(482, 518);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 61);
+            this.button3.TabIndex = 18;
+            this.button3.Text = "Thoát";
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // btSuaXe
+            // 
+            this.btSuaXe.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSuaXe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btSuaXe.Image = global::QL_TaXi.Properties.Resources._1459326660_advancedsettings;
+            this.btSuaXe.Location = new System.Drawing.Point(205, 518);
+            this.btSuaXe.Name = "btSuaXe";
+            this.btSuaXe.Size = new System.Drawing.Size(75, 61);
+            this.btSuaXe.TabIndex = 16;
+            this.btSuaXe.Text = "Sửa";
+            this.btSuaXe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btSuaXe.UseVisualStyleBackColor = true;
+            this.btSuaXe.Click += new System.EventHandler(this.btSuaXe_Click);
+            // 
+            // btThemLoaiXe
+            // 
+            this.btThemLoaiXe.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btThemLoaiXe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btThemLoaiXe.Image = global::QL_TaXi.Properties.Resources.Icons_Land_Transporter_Taxi_Right_Yellow;
+            this.btThemLoaiXe.Location = new System.Drawing.Point(301, 518);
+            this.btThemLoaiXe.Name = "btThemLoaiXe";
+            this.btThemLoaiXe.Size = new System.Drawing.Size(160, 61);
+            this.btThemLoaiXe.TabIndex = 17;
+            this.btThemLoaiXe.Text = "Thêm Loại Xe";
+            this.btThemLoaiXe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btThemLoaiXe.UseVisualStyleBackColor = true;
+            // 
+            // btXoaXe
+            // 
+            this.btXoaXe.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btXoaXe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btXoaXe.Image = global::QL_TaXi.Properties.Resources._1459325731_DeleteRed;
+            this.btXoaXe.Location = new System.Drawing.Point(109, 518);
+            this.btXoaXe.Name = "btXoaXe";
+            this.btXoaXe.Size = new System.Drawing.Size(75, 61);
+            this.btXoaXe.TabIndex = 15;
+            this.btXoaXe.Text = "Xóa";
+            this.btXoaXe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btXoaXe.UseVisualStyleBackColor = true;
+            this.btXoaXe.Click += new System.EventHandler(this.btXoaXe_Click);
+            // 
+            // btThemXe
+            // 
+            this.btThemXe.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btThemXe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btThemXe.Image = global::QL_TaXi.Properties.Resources._1459325611_add2_;
+            this.btThemXe.Location = new System.Drawing.Point(7, 518);
+            this.btThemXe.Name = "btThemXe";
+            this.btThemXe.Size = new System.Drawing.Size(81, 61);
+            this.btThemXe.TabIndex = 14;
+            this.btThemXe.Text = "Thêm";
+            this.btThemXe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btThemXe.UseVisualStyleBackColor = true;
+            this.btThemXe.Click += new System.EventHandler(this.btThemXe_Click);
+            // 
+            // dgvXe
+            // 
+            this.dgvXe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvXe.Location = new System.Drawing.Point(6, 284);
+            this.dgvXe.Name = "dgvXe";
+            this.dgvXe.Size = new System.Drawing.Size(557, 223);
+            this.dgvXe.TabIndex = 9;
+            this.dgvXe.SelectionChanged += new System.EventHandler(this.dgvXe_SelectionChanged);
+            // 
+            // txtMaTaiXe
+            // 
+            this.txtMaTaiXe.Location = new System.Drawing.Point(212, 207);
+            this.txtMaTaiXe.Name = "txtMaTaiXe";
+            this.txtMaTaiXe.Size = new System.Drawing.Size(215, 20);
+            this.txtMaTaiXe.TabIndex = 8;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(115, 207);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(76, 20);
+            this.label20.TabIndex = 7;
+            this.label20.Text = "Mã tài xế:";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(108, 241);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(83, 20);
+            this.label19.TabIndex = 5;
+            this.label19.Text = "Mã loại xe:";
+            // 
+            // txtBienSoXe
+            // 
+            this.txtBienSoXe.Location = new System.Drawing.Point(212, 173);
+            this.txtBienSoXe.Name = "txtBienSoXe";
+            this.txtBienSoXe.Size = new System.Drawing.Size(215, 20);
+            this.txtBienSoXe.TabIndex = 4;
             // 
             // label18
             // 
@@ -498,10 +611,10 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.button1);
-            this.groupBox3.Controls.Add(this.button2);
-            this.groupBox3.Controls.Add(this.radioButton1);
-            this.groupBox3.Controls.Add(this.radioButton2);
+            this.groupBox3.Controls.Add(this.btBoTimXe);
+            this.groupBox3.Controls.Add(this.btTimXe);
+            this.groupBox3.Controls.Add(this.rdMaTaiXe);
+            this.groupBox3.Controls.Add(this.rdBangsoXe);
             this.groupBox3.Controls.Add(this.txtTimBangSo);
             this.groupBox3.Controls.Add(this.label17);
             this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -512,55 +625,57 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Tìm Kiếm";
             // 
-            // button1
+            // btBoTimXe
             // 
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.Image = global::QL_TaXi.Properties.Resources.Danrabbit_Elementary_Button_delete;
-            this.button1.Location = new System.Drawing.Point(471, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(77, 68);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Bỏ Tìm";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btBoTimXe.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btBoTimXe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btBoTimXe.Image = global::QL_TaXi.Properties.Resources.Danrabbit_Elementary_Button_delete;
+            this.btBoTimXe.Location = new System.Drawing.Point(471, 12);
+            this.btBoTimXe.Name = "btBoTimXe";
+            this.btBoTimXe.Size = new System.Drawing.Size(77, 68);
+            this.btBoTimXe.TabIndex = 5;
+            this.btBoTimXe.Text = "Bỏ Tìm";
+            this.btBoTimXe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btBoTimXe.UseVisualStyleBackColor = true;
+            this.btBoTimXe.Click += new System.EventHandler(this.btBoTimXe_Click);
             // 
-            // button2
+            // btTimXe
             // 
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button2.Image = global::QL_TaXi.Properties.Resources._1459329975_xmag;
-            this.button2.Location = new System.Drawing.Point(390, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 68);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Tìm";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btTimXe.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btTimXe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btTimXe.Image = global::QL_TaXi.Properties.Resources._1459329975_xmag;
+            this.btTimXe.Location = new System.Drawing.Point(390, 12);
+            this.btTimXe.Name = "btTimXe";
+            this.btTimXe.Size = new System.Drawing.Size(75, 68);
+            this.btTimXe.TabIndex = 4;
+            this.btTimXe.Text = "Tìm";
+            this.btTimXe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btTimXe.UseVisualStyleBackColor = true;
+            this.btTimXe.Click += new System.EventHandler(this.btTimXe_Click);
             // 
-            // radioButton1
+            // rdMaTaiXe
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(230, 55);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(154, 25);
-            this.radioButton1.TabIndex = 3;
-            this.radioButton1.Text = "Tìm theo mã TX";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rdMaTaiXe.AutoSize = true;
+            this.rdMaTaiXe.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdMaTaiXe.Location = new System.Drawing.Point(230, 55);
+            this.rdMaTaiXe.Name = "rdMaTaiXe";
+            this.rdMaTaiXe.Size = new System.Drawing.Size(154, 25);
+            this.rdMaTaiXe.TabIndex = 3;
+            this.rdMaTaiXe.Text = "Tìm theo mã TX";
+            this.rdMaTaiXe.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rdBangsoXe
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Checked = true;
-            this.radioButton2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(35, 55);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(178, 25);
-            this.radioButton2.TabIndex = 2;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Tìm theo biển số xe";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rdBangsoXe.AutoSize = true;
+            this.rdBangsoXe.Checked = true;
+            this.rdBangsoXe.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdBangsoXe.Location = new System.Drawing.Point(35, 55);
+            this.rdBangsoXe.Name = "rdBangsoXe";
+            this.rdBangsoXe.Size = new System.Drawing.Size(178, 25);
+            this.rdBangsoXe.TabIndex = 2;
+            this.rdBangsoXe.TabStop = true;
+            this.rdBangsoXe.Text = "Tìm theo biển số xe";
+            this.rdBangsoXe.UseVisualStyleBackColor = true;
             // 
             // txtTimBangSo
             // 
@@ -895,114 +1010,6 @@
             this.tp_baocao.Text = "Báo Cáo";
             this.tp_baocao.UseVisualStyleBackColor = true;
             // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(108, 241);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(83, 20);
-            this.label19.TabIndex = 5;
-            this.label19.Text = "Mã loại xe:";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(212, 207);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(215, 20);
-            this.textBox4.TabIndex = 8;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(115, 207);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(76, 20);
-            this.label20.TabIndex = 7;
-            this.label20.Text = "Mã tài xế:";
-            // 
-            // dgvXe
-            // 
-            this.dgvXe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvXe.Location = new System.Drawing.Point(6, 284);
-            this.dgvXe.Name = "dgvXe";
-            this.dgvXe.Size = new System.Drawing.Size(557, 223);
-            this.dgvXe.TabIndex = 9;
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button3.Image = global::QL_TaXi.Properties.Resources._1459329230_exit;
-            this.button3.Location = new System.Drawing.Point(482, 518);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 61);
-            this.button3.TabIndex = 18;
-            this.button3.Text = "Thoát";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button4.Image = global::QL_TaXi.Properties.Resources._1459326660_advancedsettings;
-            this.button4.Location = new System.Drawing.Point(205, 518);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 61);
-            this.button4.TabIndex = 16;
-            this.button4.Text = "Sửa";
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button5.Image = global::QL_TaXi.Properties.Resources.Icons_Land_Transporter_Taxi_Right_Yellow;
-            this.button5.Location = new System.Drawing.Point(301, 518);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(160, 61);
-            this.button5.TabIndex = 17;
-            this.button5.Text = "Các xe của TX";
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button6.Image = global::QL_TaXi.Properties.Resources._1459325731_DeleteRed;
-            this.button6.Location = new System.Drawing.Point(109, 518);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 61);
-            this.button6.TabIndex = 15;
-            this.button6.Text = "Xóa";
-            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button7.Image = global::QL_TaXi.Properties.Resources._1459325611_add2_;
-            this.button7.Location = new System.Drawing.Point(7, 518);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(81, 61);
-            this.button7.TabIndex = 14;
-            this.button7.Text = "Thêm";
-            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(212, 239);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(215, 21);
-            this.comboBox1.TabIndex = 19;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1023,6 +1030,7 @@
             this.groupBox1.PerformLayout();
             this.tp_xe.ResumeLayout(false);
             this.tp_xe.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvXe)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.tp_khachhang.ResumeLayout(false);
@@ -1031,7 +1039,6 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvXe)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1097,22 +1104,22 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.Button btBoTimXe;
+        private System.Windows.Forms.Button btTimXe;
+        private System.Windows.Forms.RadioButton rdMaTaiXe;
+        private System.Windows.Forms.RadioButton rdBangsoXe;
         private System.Windows.Forms.TextBox txtTimBangSo;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtBienSoXe;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbMaLoaiXe;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btSuaXe;
+        private System.Windows.Forms.Button btThemLoaiXe;
+        private System.Windows.Forms.Button btXoaXe;
+        private System.Windows.Forms.Button btThemXe;
         private System.Windows.Forms.DataGridView dgvXe;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtMaTaiXe;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
     }

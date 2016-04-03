@@ -18,6 +18,7 @@ namespace QL_TaXi
     {
         public static int DK = 0;
         public static string maKH_CD = "";
+        string bienSo_CD = string.Empty;
         string tempMaTX;
         public MainForm()
         {
@@ -478,7 +479,7 @@ namespace QL_TaXi
                         }
                     }
                 }
-            }//
+            }
         }
 
         private void btnXoaKH_Click(object sender, EventArgs e)
@@ -557,18 +558,148 @@ namespace QL_TaXi
         /// </summary>
         /// 
 
-
-        //public void LoadDataTX()
-        //{
-        //    txtTimKiem.Text = "";
-        //    dgvTX.DataSource = TaiXe_BUS.LoadDanhSachTatCaTaiXe();
-        //}
-
         public void LoadDataXe()
         {
             txtTimBangSo.Text = string.Empty;
             dgvXe.DataSource = Xe_BUS.LoadDanhSachTatCaXe();
+            cbMaLoaiXe.DataSource = Xe_BUS.LoadDanhSachLoaiXe();
+            cbMaLoaiXe.DisplayMember = "MaLoaiXe";
+            cbMaLoaiXe.ValueMember = "MaLoaiXe";
         }
+
+        private void dgvXe_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvXe != null)
+            {
+                bienSo_CD = dgvXe.CurrentRow.Cells[0].Value.ToString();
+                txtBienSoXe.Text = dgvXe.CurrentRow.Cells[0].Value.ToString();
+                txtMaTaiXe.Text = dgvXe.CurrentRow.Cells[1].Value.ToString();
+                cbMaLoaiXe.Text = dgvXe.CurrentRow.Cells[2].Value.ToString();
+            }
+        }
+
+        private void btTimXe_Click(object sender, EventArgs e)
+        {
+            if (txtTimBangSo.Text == "")
+            {
+                MessageBox.Show("Bạn chưa nhập nội dung cần tìm kiếm!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtTimBangSo.Focus();
+            }
+            else
+            {
+                string tmpTx = txtTimBangSo.Text.Trim();
+                if (rdBangsoXe.Checked)
+                {
+                    dgvXe.DataSource = Xe_BUS.TimXeTheoBangSo(tmpTx);
+                }
+                else
+                {
+                    if (TaiXe_BUS.KiemTraMaTX_CoTonTai(tmpTx) == 0 || tmpTx.Length > 5)
+                    {
+                        MessageBox.Show("Mã tài xế không tồn tại", "Kết Quả Tìm Kiếm", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        dgvXe.DataSource = Xe_BUS.TimXeTheoMaTaiXe(tmpTx);
+                    }
+
+                }
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btBoTimXe_Click(object sender, EventArgs e)
+        {
+            LoadDataXe();
+        }
+
+        private void btThemXe_Click(object sender, EventArgs e)
+        {
+            if (txtBienSoXe.Text == "")
+            {
+                MessageBox.Show("Bạn chưa nhập biển số xe", "Thiếu thông tin xe", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtBienSoXe.Focus();
+            }
+            else
+            {
+                if (txtMaTaiXe.Text == "")
+                {
+                    MessageBox.Show("Bạn chưa nhập mã tài  xế", "Thiếu thông tin tài xế", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtMaTaiXe.Focus();
+                }
+                else
+                {
+                    try
+                    {
+                        if (txtBienSoXe.Text.Substring(0, 3) != "BSX")
+                        {
+                            MessageBox.Show("Biển số xe không hợp lệ. Vui lòng theo mẫu BSXxx", "Sai thông tin bảng số", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            txtBienSoXe.Focus();
+                        }
+                        else
+                        {
+                            if (Xe_BUS.KiemTraBienSoXe_CoTonTai(txtBienSoXe.Text.Trim()) == 1)
+                            {
+                                MessageBox.Show("Biển số xe đã tồn tại, vui lòng nhập lại", "Thông tin nhập không hợp lệ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                txtBienSoXe.Focus();
+                            }
+                            else 
+                            {
+                                Xe_DTO xe = new Xe_DTO(txtBienSoXe.Text.Trim(), txtMaTaiXe.Text.Trim(), cbMaLoaiXe.SelectedValue.ToString());
+                                Xe_BUS.ThemXeMoi(xe);
+                                LoadDataXe();
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+            }
+        }
+
+        private void btXoaXe_Click(object sender, EventArgs e)
+        {
+            string tmpBienSo = dgvXe.Rows[dgvXe.CurrentCell.RowIndex].Cells[0].Value.ToString();
+            if (MessageBox.Show("Bạn có chắc chắn muốn xóa xe biển số " + tmpBienSo +"?" , "Xác nhận xóa xe", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                Xe_BUS.XoaXe(tmpBienSo);
+            LoadDataXe();
+        }
+
+
+        
+        private void btSuaXe_Click(object sender, EventArgs e)
+        {
+            string tmpBienSo = dgvXe.CurrentRow.Cells[0].Value.ToString();
+            if (bienSo_CD != txtBienSoXe.Text)
+            {
+                MessageBox.Show("Bạn không thể thay đổi bảng số xe khi thực hiện sửa thông tin biển số xe!", "Thay đổi không phù hợp", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtBienSoXe.Focus();
+                txtBienSoXe.Text = bienSo_CD;
+            }
+            else
+            {
+                if (TaiXe_BUS.KiemTraMaTX_CoTonTai(txtMaTaiXe.Text.Trim()) == 0)
+                {
+                    MessageBox.Show("Mã tài xế không tồn tại! Vui lòng thử lại.", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtMaTaiXe.Focus();
+                }
+                else
+                {
+                    Xe_DTO xe = new Xe_DTO(txtBienSoXe.Text.Trim(), txtMaTaiXe.Text.Trim(), cbMaLoaiXe.SelectedValue.ToString());
+                    if (MessageBox.Show("Bạn có chắc chắn muốn sửa thông tin xe biển số " + tmpBienSo + "?", "Xác nhận sửa thong tin xe", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        Xe_BUS.SuaThongTinXe(xe);
+                    LoadDataXe();
+                }
+            }
+        }
+
+        
 
     }
 }

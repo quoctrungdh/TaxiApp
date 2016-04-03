@@ -168,47 +168,47 @@ namespace DTO
             set { _maTaiXe = value; }
         }
 
-        private string _hangXe;
+        //private string _hangXe;
 
-        public string HangXe
-        {
-            get { return _hangXe; }
-            set { _hangXe = value; }
-        }
+        //public string HangXe
+        //{
+        //    get { return _hangXe; }
+        //    set { _hangXe = value; }
+        //}
 
-        private string _model;
+        //private string _model;
 
-        public string Model
-        {
-            get { return _model; }
-            set { _model = value; }
-        }
+        //public string Model
+        //{
+        //    get { return _model; }
+        //    set { _model = value; }
+        //}
 
-        private string _dangCapXe;
+        //private string _dangCapXe;
 
-        public string DangCapXe
-        {
-            get { return _dangCapXe; }
-            set { _dangCapXe = value; }
-        }
+        //public string DangCapXe
+        //{
+        //    get { return _dangCapXe; }
+        //    set { _dangCapXe = value; }
+        //}
 
-        private int _donGia;
+        //private int _donGia;
 
-        public int DonGia
-        {
-            get { return _donGia; }
-            set { _donGia = value; }
-        }
+        //public int DonGia
+        //{
+        //    get { return _donGia; }
+        //    set { _donGia = value; }
+        //}
 
-        public Xe_DTO(string bienSo, string maLoaiXe, string maTaiXe, string hangXe, string model, string dangCapXe, int donGia)
+        public Xe_DTO(string bienSo, string maTaiXe, string maLoaiXe/*, string hangXe, string model, string dangCapXe, int donGia*/)
         {
             _bienSoXe = bienSo;
             _maLoaiXe = maLoaiXe;
             _maTaiXe = maTaiXe;
-            _hangXe = hangXe;
-            _model = model;
-            _dangCapXe = dangCapXe;
-            _donGia = donGia;
+            //_hangXe = hangXe;
+            //_model = model;
+            //_dangCapXe = dangCapXe;
+            //_donGia = donGia;
         }
                 
     }
