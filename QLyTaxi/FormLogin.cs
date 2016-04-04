@@ -36,8 +36,8 @@ namespace QL_TaXi
                 {
                     if (txtUsername.Text == "abc" && txtPassword.Text == "abc")
                     {
+                        MainForm.DK = 1;
                         Close();
-                        Form1.DK = 1;
                     }
                     else
                     {
@@ -79,6 +79,16 @@ namespace QL_TaXi
         {
             checkBox1.Checked = false;
         }
+
+        private void FormLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(MainForm.DK==0)
+            {
+                if (MessageBox.Show("Bạn có thật sự muốn thoát?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
+                    e.Cancel = true;
+            }
+        }
+
 
 
     }

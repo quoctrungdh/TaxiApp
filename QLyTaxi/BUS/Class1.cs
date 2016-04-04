@@ -84,6 +84,11 @@ namespace BUS
             TaiXe_DAO.SuaTaiXe(taixe);
         }
 
+        public static DataTable LayDanhSachCacXeCuaTX(string MaTX)
+        {
+            return TaiXe_DAO.LayDanhSachCacXeCuaTX(MaTX);
+        }
+
     }
 
     public class KhachHang_BUS
@@ -166,6 +171,49 @@ namespace BUS
                 throw ex;
             }
             
+        }
+    }
+
+    public class Xe_BUS
+    {
+        public static DataTable LoadDanhSachTatCaXe()
+        {
+            return Xe_DAO.LoadDanhSachTatCaXe();
+        }
+
+        public static DataTable LoadDanhSachLoaiXe()
+        {
+            return Xe_DAO.LoadDanhSachLoaiXe();
+        }
+
+        public static DataTable TimXeTheoMaTaiXe(string maTx)
+        {
+            return Xe_DAO.TimXeTheoMaTaiXe(maTx);
+        }
+
+        public static DataTable TimXeTheoBangSo(string bienSo)
+        {
+            return Xe_DAO.TimXeTheoBienSo(bienSo);
+        }
+
+        public static int KiemTraBienSoXe_CoTonTai(string bienSo)
+        {
+            return Xe_DAO.KiemTraBienSoXe_CoTonTai(bienSo);
+        }
+
+        public static void ThemXeMoi(Xe_DTO xe)
+        {
+            Xe_DAO.ThemXeMoi(xe);
+        }
+
+        public static void XoaXe(string bienSo)
+        {
+            Xe_DAO.XoaXe(bienSo);
+        }
+
+        public static void SuaThongTinXe(Xe_DTO xe)
+        {
+            Xe_DAO.SuaKhachThongTinXe(xe);
         }
     }
 }

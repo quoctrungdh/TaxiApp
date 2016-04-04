@@ -256,9 +256,29 @@ namespace DAO
             }
         }
 
+        //Lay danh sach cac xe cua mot Tai Xe
+        public static DataTable LayDanhSachCacXeCuaTX(string MaTX)
+        {
+            try
+            {
+                SqlConnection cn = SQLconnectionData.HamKetNoi();
+                SqlCommand cmd = new SqlCommand("LayDanhSachXeCuaTX", cn);
+                cmd.Parameters.AddWithValue("@MaTX", MaTX);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter apdt = new SqlDataAdapter(cmd);
+                DataTable table=new DataTable();
+                apdt.Fill(table);
+                return table;
+
+            }
+            catch (Exception ex)
+            {
+                
+                throw ex;
+            }
+        }
         
     }
-
 
     public class KhachHang_DAO
     {
@@ -484,6 +504,165 @@ namespace DAO
             }
             catch(Exception ex)
             {
+                throw ex;
+            }
+        }
+    }
+
+    public class Xe_DAO
+    {
+        public static DataTable LoadDanhSachTatCaXe()
+        {
+            try
+            {
+                SqlConnection cnn = SQLconnectionData.HamKetNoi();
+                SqlCommand cmd = new SqlCommand("LayDanhSachXe", cnn);
+                cmd.CommandType = CommandType.Text;
+                SqlDataAdapter adpt = new SqlDataAdapter(cmd);
+                DataTable table = new DataTable();
+                adpt.Fill(table);
+                return table;
+            }
+            catch (Exception ex)
+            {                
+                throw ex;
+            }
+        }
+
+        public static DataTable LoadDanhSachLoaiXe()
+        {
+            try
+            {
+                SqlConnection cnn = SQLconnectionData.HamKetNoi();
+                SqlCommand cmd = new SqlCommand("LayDanhSachCacLoaiXe", cnn);
+                cmd.CommandType = CommandType.Text;
+                SqlDataAdapter adpt = new SqlDataAdapter(cmd);
+                DataTable table = new DataTable();
+                adpt.Fill(table);
+                return table;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public static DataTable TimXeTheoMaTaiXe(string maTx)
+        {
+            try
+            {
+                SqlConnection cnn = SQLconnectionData.HamKetNoi();
+                SqlCommand cmd = new SqlCommand("LayDanhSachXeTheoMaTaiXe", cnn);
+                cmd.Parameters.AddWithValue("@MaTX", maTx);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter adpt = new SqlDataAdapter(cmd);
+                DataTable table = new DataTable();
+                adpt.Fill(table);
+                return table;
+            }
+            catch (Exception ex)
+            {                
+                throw ex;
+            }
+        }
+
+        public static DataTable TimXeTheoBienSo(string bienSo)
+        {
+            try
+            {
+                SqlConnection cnn = SQLconnectionData.HamKetNoi();
+                SqlCommand cmd = new SqlCommand("LayDanhSachXeTheoBienSo", cnn);
+                cmd.Parameters.AddWithValue("@BienSoXe", bienSo);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter adpt = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adpt.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {                
+                throw ex;
+            }
+        }
+
+        public static int KiemTraBienSoXe_CoTonTai(string bienSo)
+        {
+            int kq;
+            try
+            {
+                SqlConnection cnn = SQLconnectionData.HamKetNoi();
+                SqlCommand cmd = new SqlCommand("KiemTraBienSoXe_CoTonTai", cnn);
+                cmd.Parameters.AddWithValue("@BienSoXe", bienSo);               
+                SqlParameter output = new SqlParameter("@KetQua", SqlDbType.Int);
+                output.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(output);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cnn.Open();
+                cmd.ExecuteNonQuery();
+                kq = Convert.ToInt16(output.Value.ToString());
+                cnn.Close();
+            }
+            catch (Exception ex)
+            {                
+                throw ex;
+            }
+            return kq;
+        }
+
+        public static void ThemXeMoi(Xe_DTO xe)
+        {
+            try
+            {
+                SqlConnection cnn = SQLconnectionData.HamKetNoi();
+                SqlCommand cmd = new SqlCommand("ThemXe", cnn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@BienSoXe", xe.BienSoXe);               
+                cmd.Parameters.AddWithValue("@MaLoaiXe", xe.MaLoaiXe);
+                cmd.Parameters.AddWithValue("@MaTaiXe", xe.MaTaiXe);
+                cnn.Open();
+                cmd.ExecuteNonQuery();
+                cnn.Close();
+            }
+            catch (Exception ex)
+            {                
+                throw ex;
+            }
+        }
+
+        public static void XoaXe(string bienSo)
+        {
+            try
+            {
+                SqlConnection cnn = SQLconnectionData.HamKetNoi();
+                SqlCommand cmd = new SqlCommand("XoaXe", cnn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@BienSoXe", bienSo);
+                cnn.Open();
+                cmd.ExecuteNonQuery();
+                cmd.Clone();
+            }
+            catch (Exception ex)
+            {                
+                throw ex;
+            }
+        }
+
+        public static void SuaKhachThongTinXe(Xe_DTO xe)
+        {
+            try
+            {
+                SqlConnection cnn = SQLconnectionData.HamKetNoi();
+                SqlCommand cmd = new SqlCommand("SuaThongTinXe", cnn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@BienSoXe", xe.BienSoXe);
+                cmd.Parameters.AddWithValue("@MaLoaiXe", xe.MaLoaiXe);
+                cmd.Parameters.AddWithValue("@MaTaiXe", xe.MaTaiXe);
+                cnn.Open();
+                cmd.ExecuteNonQuery();
+                cnn.Close();
+            }
+            catch (Exception ex)
+            {                
                 throw ex;
             }
         }

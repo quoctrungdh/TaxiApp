@@ -141,4 +141,75 @@ namespace DTO
         }
         
     }
+
+    public class Xe_DTO
+    {
+        private string _bienSoXe;
+
+        public string BienSoXe
+        {
+            get { return _bienSoXe; }
+            set { _bienSoXe = value; }
+        }
+
+        private string _maLoaiXe;
+
+        public string MaLoaiXe
+        {
+            get { return _maLoaiXe; }
+            set { _maLoaiXe = value; }
+        }
+
+        private string _maTaiXe;
+
+        public string MaTaiXe
+        {
+            get { return _maTaiXe; }
+            set { _maTaiXe = value; }
+        }
+
+        //private string _hangXe;
+
+        //public string HangXe
+        //{
+        //    get { return _hangXe; }
+        //    set { _hangXe = value; }
+        //}
+
+        //private string _model;
+
+        //public string Model
+        //{
+        //    get { return _model; }
+        //    set { _model = value; }
+        //}
+
+        //private string _dangCapXe;
+
+        //public string DangCapXe
+        //{
+        //    get { return _dangCapXe; }
+        //    set { _dangCapXe = value; }
+        //}
+
+        //private int _donGia;
+
+        //public int DonGia
+        //{
+        //    get { return _donGia; }
+        //    set { _donGia = value; }
+        //}
+
+        public Xe_DTO(string bienSo, string maTaiXe, string maLoaiXe/*, string hangXe, string model, string dangCapXe, int donGia*/)
+        {
+            _bienSoXe = bienSo;
+            _maLoaiXe = maLoaiXe;
+            _maTaiXe = maTaiXe;
+            //_hangXe = hangXe;
+            //_model = model;
+            //_dangCapXe = dangCapXe;
+            //_donGia = donGia;
+        }
+                
+    }
 }
