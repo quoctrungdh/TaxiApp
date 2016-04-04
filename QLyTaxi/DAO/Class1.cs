@@ -277,6 +277,27 @@ namespace DAO
                 throw ex;
             }
         }
+
+        //Lấy danh sách các chuyến xe của TX
+        public static DataTable LayDanhSachChuyenXeTX(string MaTX)
+        {
+            try
+            {
+                SqlConnection cn = SQLconnectionData.HamKetNoi();
+                SqlCommand cmd = new SqlCommand("LayDanhSachChuyenXeTX", cn);
+                cmd.Parameters.AddWithValue("@MaTX", MaTX);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter apdt = new SqlDataAdapter(cmd);
+                DataTable table = new DataTable();
+                apdt.Fill(table);
+                return table;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
         
     }
 

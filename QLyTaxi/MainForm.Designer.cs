@@ -194,7 +194,7 @@
             this.btnSua.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnSua.Image = global::QL_TaXi.Properties.Resources._1459326660_advancedsettings;
-            this.btnSua.Location = new System.Drawing.Point(208, 519);
+            this.btnSua.Location = new System.Drawing.Point(198, 519);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 61);
             this.btnSua.TabIndex = 11;
@@ -208,11 +208,11 @@
             this.btnXeTX.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXeTX.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnXeTX.Image = global::QL_TaXi.Properties.Resources.Icons_Land_Transporter_Taxi_Right_Yellow;
-            this.btnXeTX.Location = new System.Drawing.Point(303, 519);
+            this.btnXeTX.Location = new System.Drawing.Point(279, 519);
             this.btnXeTX.Name = "btnXeTX";
-            this.btnXeTX.Size = new System.Drawing.Size(160, 61);
+            this.btnXeTX.Size = new System.Drawing.Size(199, 61);
             this.btnXeTX.TabIndex = 12;
-            this.btnXeTX.Text = "Các xe của TX";
+            this.btnXeTX.Text = "Các chuyến xe của TX";
             this.btnXeTX.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnXeTX.UseVisualStyleBackColor = true;
             this.btnXeTX.Click += new System.EventHandler(this.btnXeTX_Click);
@@ -222,7 +222,7 @@
             this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnXoa.Image = global::QL_TaXi.Properties.Resources._1459325731_DeleteRed;
-            this.btnXoa.Location = new System.Drawing.Point(112, 519);
+            this.btnXoa.Location = new System.Drawing.Point(104, 519);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 61);
             this.btnXoa.TabIndex = 10;

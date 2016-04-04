@@ -89,6 +89,12 @@ namespace BUS
             return TaiXe_DAO.LayDanhSachCacXeCuaTX(MaTX);
         }
 
+        //Lấy danh sách các chuyến xe của TX
+        public static DataTable LayDanhSachChuyenXeTX(string MaTX)
+        {
+            return TaiXe_DAO.LayDanhSachChuyenXeTX(MaTX);
+        }
+
     }
 
     public class KhachHang_BUS

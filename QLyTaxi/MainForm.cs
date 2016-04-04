@@ -19,7 +19,7 @@ namespace QL_TaXi
         public static int DK = 0;
         public static string maKH_CD = "";
         string bienSo_CD = string.Empty;
-        string tempMaTX;
+        public static string tempMaTX;
         public MainForm()
         {
             FormLogin frm = new FormLogin();
@@ -322,8 +322,8 @@ namespace QL_TaXi
 
         private void btnXeTX_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedTab = tp_xe;
-            dgvXe.DataSource = TaiXe_BUS.LayDanhSachCacXeCuaTX(tempMaTX);
+            FormCacChuyenDiCuaTX form = new FormCacChuyenDiCuaTX();
+            form.ShowDialog();
         }
         
 
